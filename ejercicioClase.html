@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./ejercicioClase.css">
+    <link rel="shortcut icon" href="./ico.png" />
+    <title>Estructuras Control</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Ejercicio sobre estructuras de control</h1>
+        <h2>Deiber David Verano Avila</h2>
+    </header>
+    <section class = "menu">
+    <h1>Menú De Opciones</h1>
+    <h2>1. Definir si es mayor o menor de edad <br>
+    2. Simulacion de una alcancia <br>
+    3. Dibujar una figura geometrica <br>
+    4. Contar cuantos integrantes tiene su familia <br>
+    5. Dibujar con figuras geometricas
+    </h2>
+    <h3>Seleccione la opcion</h3>
+    <form>
+        <select name="menu" id="menuop">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select>
+        <input type="submit" id = "enviar">
+    </form>
+    </section>
+    <script>
+        //Dibujar Figuras--------------------------------------------------------------
+        function cuadrado() {
+            document.write("<br><br><br><br>")
+            for (let i = 0; i < 35; i++) {
+                document.write("<br>");
+                for(let j = 0;j<70;j++){
+                    document.write("--");
+                }   
+            }
+        }
+        function triangulo() {
+            for (let i = 0; i < 40; i++) {
+                document.write("<br>");
+                for(let j = 0;j<i;j++){
+                    document.write("00");
+                }   
+            }
+        } 
+        function trapecio() {
+            document.write("<br><br><br><br>")
+            for (let i = 0; i <= 35; i++) {
+                        document.write("<br>");
+                        for(let j = i;j<60;j++){
+                            document.write("00");
+                        }   
+                    }
+        }
+        function rombo() {
+            for(let h = 0; h<20; h++){
+                document.write("<br>");
+                for(let j = h; j>h-j;j--){
+                    document.write("00");
+                }
+            }
+            for (let i = 0; i < 20; i++) {
+                        document.write("<br>");
+                        for(let j = 17;j>i;j--){
+                            let a = "0";
+                            document.write(a);
+                        }   
+                    }
+        }
+        function rectangulo() {
+            document.write("<br><br><br><br>")
+            for (let i = 0; i < 25; i++) {
+                document.write("<br>");
+                for(let j = 0;j<155;j++){
+                    document.write("o");
+                }   
+            }
+        }
+        function circulo() {
+            let n = 12;
+            document.write("<br><br><br><br>")
+            for(let j = 0; j <= n*2; j++){
+                for(let i = 0;i<=n*2;i++){
+                    if(Math.pow((i-n),2.0)+Math.pow((j-n),2.0) <= Math.pow(n,2)){
+                        document.write("##");
+                    }else{
+                        document.write(" ");
+                    }
+                }
+                document.write("<br>")
+            }
+        }
+        function limpiar() {
+            document.querySelector("body").innerHTML="";
+                document.write("<h1>Escoge que figura geometrica quieres dibujar</h1>")
+                document.write("<form>")
+                document.write("<input id='polla1' type='button' value='Cuadrado' onclick=\"cuadrado()\">");
+                document.write("<input id='polla2' type='button' value='Triangulo' onclick=\"triangulo()\">")
+                document.write("<input id='polla5' type='button' value='Circulo' onclick=\"circulo()\">")
+                document.write("<input id='polla3' type='button' value='Trapecio' onclick=\"trapecio()\">")
+                document.write("<input id='polla4' type='button' value='Rectangulo' onclick=\"rectangulo()\">")
+                document.write("<input id='polla5' type='button' value='Rombo' onclick=\"rombo()\">")
+                document.write("<input id='polla7' type='button' value='Limpiar' onclick=\"limpiar()\">")
+                document.write("</form>")
+                document.querySelector("body").style.backgroundColor="black";
+                document.querySelector("body").style.color="white";
+                document.querySelector("body").style.textAlign="center"; 
+        }
+        //Dibujar con Figuras----------------------------------------------------------
+        function limpiarD() {
+            document.querySelector("body").innerHTML="";
+                document.write("<h1>Haz tus dibujos con figuras !!</h1>")
+                document.write("<form>")
+                document.write("<input id='polla1' type='button' value='Cuadrado' onclick=\"cuadradoD()\">");
+                document.write("<input id='polla2' type='button' value='Triangulo' onclick=\"trianguloD()\">")
+                document.write("<input id='polla5' type='button' value='Circulo' onclick=\"circuloD()\">")
+                document.write("<input id='polla3' type='button' value='Trapecio' onclick=\"trapecioD()\">")
+                document.write("<input id='polla4' type='button' value='Rectangulo' onclick=\"rectanguloD()\">")
+                document.write("<input id='polla5' type='button' value='Rombo' onclick=\"romboD()\">")
+                document.write("<input id='polla6' type='button' value='Bote' onclick=\"boteD()\">")
+                document.write("<input id='polla6' type='button' value='Espada' onclick=\"espadaD()\">")
+                document.write("<input id='polla6' type='button' value='Limpiar' onclick=\"limpiarD()\">")
+                document.write("</form>")
+                document.querySelector("body").style.backgroundColor="black";
+                document.querySelector("body").style.color="white";
+                document.querySelector("body").style.textAlign="center"; 
+        }
+        function cuadradoD() {
+            for (let i = 0; i < 7; i++) {
+                document.write("<br>");
+                for(let j = 0;j<14;j++){
+                    document.write("0");
+                }   
+            }
+        }
+        function trianguloD() {
+            for (let i = 0; i < 15; i++) {
+                document.write("<br>");
+                for(let j = 0;j<i;j++){
+                    document.write("00");
+                }   
+            }
+        } 
+        function trapecioD() {
+            for (let i = 0; i <= 5; i++) {
+                        document.write("<br>");
+                        for(let j = i;j<20;j++){
+                            document.write("00");
+                        }   
+                    }
+        }
+        function boteD() {
+            for(let h = 0; h<7; h++){
+                document.write("<br>");
+                for(let j = h; j>h-j;j--){
+                    document.write("-+-+-");
+                }
+            }
+            for (let i = 0; i < 3; i++) {
+                        document.write("<br>");
+                        for(let j = 10;j>i;j--){
+                            let a = "0";
+                            a = a.repeat(5);
+                            document.write(a);
+                        }   
+                    }
+        }
+        function romboD() {
+            for(let h = 0; h<7; h++){
+                document.write("<br>");
+                for(let j = h; j>h-j;j--){
+                    document.write("00");
+                }
+            }
+            for (let i = 0; i < 7; i++) {
+                        document.write("<br>");
+                        for(let j = 6;j>i;j--){
+                            let a = "0";
+                            document.write(a);
+                        }   
+                    }
+        }
+        function rectanguloD() {
+            for (let i = 0; i < 5; i++) {
+                document.write("<br>");
+                for(let j = 0;j<25;j++){
+                    document.write("oo");
+                }   
+            }
+        }
+        function circuloD() {
+            let n = 4;
+            document.write("<br>")
+            for(let j = 0; j <= n*2; j++){
+                for(let i = 0;i<=n*2;i++){
+                    if(Math.pow((i-n),2.0)+Math.pow((j-n),2.0) <= Math.pow(n,2)){
+                        document.write("##");
+                    }else{
+                        document.write(" ");
+                    }
+                }
+                document.write("<br>")
+            }
+        }
+        function espadaD() {
+            romboD();
+            romboD();
+            trapecioD();
+            for (let i = 0; i < 7; i++) {
+                document.write("<br>");
+                for(let j = 0;j<10;j++){
+                    document.write("0");
+                }   
+            }
+        }
+        let enviar = document.getElementById("enviar");
+        enviar.addEventListener("click",(e) => {
+            e.preventDefault()
+            let opcion = parseInt(document.getElementById("menuop").value);
+            console.log(opcion);
+            switch(opcion){
+                case 1:
+                    let edad = parseInt(prompt("Ingrese su edad para definir si es mayor o no: "))
+                    if(edad >=18){
+                        alert("Usted es mayor de edad");
+                    }else{
+                        alert("Usted es menor de edad");
+                    }
+                    break;
+                case 2:
+                    let valor = parseInt(prompt("Ingrese cuanto quiere ahorrar en su alcancia"));
+                    let ahorro = 0;
+                    while(ahorro < valor){
+                        let ingreso = parseInt(prompt("Cuanto quiere ingresar a su alcancia?"));
+                        ahorro += ingreso;
+                        alert("Has ahorrado hasta el momento: $"+ahorro);
+                    }
+                    alert("Felicidades cumpliste tu meta");
+                    break;
+                case 3:
+                    document.write("<h1>Escoge que figura geometrica quieres dibujar</h1>")
+                    document.write("<form>")
+                    document.write("<input id='polla1' type='button' value='Cuadrado' onclick=\"cuadrado()\">");
+                    document.write("<input id='polla2' type='button' value='Triangulo' onclick=\"triangulo()\">")
+                    document.write("<input id='polla5' type='button' value='Circulo' onclick=\"circulo()\">")
+                    document.write("<input id='polla3' type='button' value='Trapecio' onclick=\"trapecio()\">")
+                    document.write("<input id='polla4' type='button' value='Rectangulo' onclick=\"rectangulo()\">")
+                    document.write("<input id='polla5' type='button' value='Rombo' onclick=\"rombo()\">")
+                    document.write("<input id='polla7' type='button' value='Limpiar' onclick=\"limpiar()\">")
+                    document.write("</form>")
+                    document.querySelector("body").style.backgroundColor="black";
+                    document.querySelector("body").style.color="white";
+                    document.querySelector("body").style.textAlign="center";
+                    
+                    break;
+                
+                case 4:
+                    let familiares = [];
+                    let contador = 0;
+                    let i = 0;
+                    do{
+                        familiares[i] = prompt("Ingrese el nombre un familiar");
+                        opcion = prompt("Quiere ingresar otro familiar?: Si/No");
+                        i++;
+                    }while(opcion != "no" && opcion != "NO" && opcion != "No");
+                    familiares.forEach(familiar=>{
+                        contador += 1;
+                    })
+                    alert("Usted tiene "+contador+" familiares")
+                    break;
+                case 5:
+                    document.write("<h1>Haz tus dibujos con figuras !!</h1>")
+                    document.write("<form>")
+                    document.write("<input id='polla1' type='button' value='Cuadrado' onclick=\"cuadradoD()\">");
+                    document.write("<input id='polla2' type='button' value='Triangulo' onclick=\"trianguloD()\">")
+                    document.write("<input id='polla5' type='button' value='Circulo' onclick=\"circuloD()\">")
+                    document.write("<input id='polla3' type='button' value='Trapecio' onclick=\"trapecioD()\">")
+                    document.write("<input id='polla4' type='button' value='Rectangulo' onclick=\"rectanguloD()\">")
+                    document.write("<input id='polla5' type='button' value='Rombo' onclick=\"romboD()\">")
+                    document.write("<input id='polla6' type='button' value='Bote' onclick=\"boteD()\">")
+                    document.write("<input id='polla6' type='button' value='Espada' onclick=\"espadaD()\">")
+                    document.write("<input id='polla7' type='button' value='Limpiar' onclick=\"limpiarD()\">")
+                    document.write("</form>")
+                    document.querySelector("body").style.backgroundColor="black";
+                    document.querySelector("body").style.color="white";
+                    document.querySelector("body").style.textAlign="center"; 
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
